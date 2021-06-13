@@ -1,0 +1,82 @@
+<html>
+<head><title>Crop Recommendation</title></head>
+
+<style>
+body{
+background-image: url('/static/farmer1.jpg');
+background-size: cover;
+}
+
+form{
+text-align:center
+}
+input{
+width:50%;
+
+}
+input[type=submit]{
+background-color:green;
+color:white;
+width: 25%
+}
+label{
+font-size: 20px;
+display:inline-block;
+width:100px;
+text-align: right;
+}
+
+
+</style>
+
+<body>
+<img arc="/static/farmer1.jpg">
+<center><h1>Crop Recommendation </h1></center>
+   
+<form action="{{url_for('predict')}}" method="post">
+
+<label for = 'N'>Nitrogen</label>
+<input type = 'number' id = 'N' name = 'f1' placeholder = 'Enter value of Nitrogen content'   />
+<br></br>
+
+ <label for = 'P'>Phosphorus</label>
+<input type = 'number' id = 'P'name = 'f2' placeholder = 'Enter value of Phosphorus content'   />
+<br></br>
+
+<label for = 'K'>Potassium</label>
+<input type = 'number' id = 'K'name = 'f3' placeholder = 'Enter value of Potassium content'   />
+<br></br>
+
+<label for = 'temp'>Temperature</label>
+<input type = 'number' id = 'temp'name = 'f4' placeholder = 'Enter value of Temperature...'   />
+<br></br>
+
+<label for = 'N'>Humidity</label>
+<input type = 'number' id = 'N'name = 'f5' placeholder = 'Enter value of Humidity...'   />
+<br></br>
+
+<label for = 'N'>pH</label>
+<input type = 'number' id = 'N' name = 'f6' placeholder = 'Enter value of pH...'   />
+<br></br>
+
+<label for = 'N'>Rain Fall</label>
+<input type = 'number' id = 'N'name = 'f7' placeholder = 'Enter value of Rainfall...'   />
+<br></br>
+
+<label></label>
+<button id='submit' type='submit' value = 'Predict' >Predict</button>
+
+</form>
+<center><h1>  {{ result }}</h1></center>
+</body>
+
+
+
+
+
+
+
+
+</form>
+</body>
+</html>
